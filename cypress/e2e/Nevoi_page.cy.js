@@ -1,7 +1,7 @@
 describe('Nevoi page', ()=>{
     //Preconditions
     beforeEach(()=>{
-        //Navigate to homepage after log in
+        //Navigate to "Autentificare" page
         cy.visit('https://iwanttohelp.bim.assistcloud.services/auth/login')
 
         //type username
