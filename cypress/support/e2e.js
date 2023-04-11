@@ -12,6 +12,7 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
+import 'cypress-plugin-api'
 Cypress.on('uncaught:exception', (err, runnable) => {
     // returning false here prevents Cypress from
     // failing the test
