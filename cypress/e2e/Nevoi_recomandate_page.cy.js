@@ -116,7 +116,7 @@ describe('Nevoi recomandate page',()=>{
         cy.get(':nth-child(3) > .nav-link > p').click()
 
         //Click on the "Vizualizeaza" buton
-        cy.get('i[class="fas fa-eye view text-info action-icon"]').click()
+        cy.get('i[class="fas fa-eye view text-info action-icon"]').click({multiple:true,force:true})
 
         //wait 1 seconds
         cy.wait(1000)
@@ -137,7 +137,7 @@ describe('Nevoi recomandate page',()=>{
         cy.get(':nth-child(3) > .nav-link > p').click()
 
         //Click on the “Sterge” button
-        cy.get('i[class="fas fa-trash-alt view text-danger action-icon"]').click()
+        cy.get('i[class="fas fa-trash-alt view text-danger action-icon"]').click({multiple:true,force:true})
 
         //wait 1 seconds
         cy.wait(1000)
