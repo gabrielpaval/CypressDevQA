@@ -10,7 +10,10 @@ describe('Verify all header elements',()=>{
         cy.get('.navbar-brand').click()
 
         //check if the "Acasa" page has been accessed
-        cy.url().should('eq', 'https://iwanttohelp.bim.assistcloud.services/')  
+        cy.url().should('eq', 'https://iwanttohelp.bim.assistcloud.services/')
+        
+        //check the text
+        cy.get('a[class="nav-link router-link-exact-active router-link-active"]').should('have.text', " acasa ")
     })
 
     //Test if the "Top Voluntari" page is loaded
@@ -19,7 +22,10 @@ describe('Verify all header elements',()=>{
         cy.get(':nth-child(2) > .nav-link').click();
 
         //check if the "Top Voluntari" page has been accessed
-        cy.url().should('contains','/search')
+        cy.url().should('contains', '/search')
+
+        //check the text
+        cy.get('a[class="nav-link router-link-exact-active router-link-active"]').should('have.text', " Top voluntari ")
     })
 
     //Test if the "Lista nevoi" page is loaded
@@ -29,6 +35,9 @@ describe('Verify all header elements',()=>{
 
         //check if the "Lista nevoi" page has been accessed
         cy.url().should('contains','/needs_list')
+
+        //check the text
+        cy.get('a[class="nav-link router-link-exact-active router-link-active"]').should('have.text', " Lista nevoi ")
     })
 
     //Test if the "Despre noi" page is loaded
@@ -38,6 +47,9 @@ describe('Verify all header elements',()=>{
 
         //check if the "Despre noi" page has been accessed
         cy.url().should('contains','/about')
+
+        //check the text
+        cy.get('a[class="nav-link router-link-exact-active router-link-active"]').should('have.text', " Despre noi ")
     })
 
     //Test if the "Ofera sugestie" page is loaded
@@ -47,6 +59,9 @@ describe('Verify all header elements',()=>{
 
         //check if the "Ofera sugestie" page has been accessed
         cy.url().should('contains','/contact')
+
+        //check the text
+        cy.get('a[class="nav-link router-link-exact-active router-link-active"]').should('have.text', " Ofera Sugestie ")       
     })
 
     //Test if the "Devino voluntar" page is loaded
@@ -56,6 +71,9 @@ describe('Verify all header elements',()=>{
 
         //check if the "Devino voluntar" page has been accessed
         cy.url().should('contains','/auth/register')
+
+        //check the text
+        cy.get('a[class="nav-link router-link-exact-active router-link-active"]').should('have.text', " Devino voluntar ")
     })
 
     //Test if the "Autentificare" page is loaded
@@ -65,5 +83,8 @@ describe('Verify all header elements',()=>{
         
         //check if the "Autentificare" page has been accessed
         cy.url().should('contains','/auth/login')
+
+        //check the text
+        cy.get('a[class="nav-link router-link-exact-active router-link-active"]').should('have.text', " Autentificare ")
     })
 })

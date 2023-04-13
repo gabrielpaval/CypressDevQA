@@ -23,6 +23,9 @@ describe('Autentificare page',()=>{
 
         //verify if the user is autentificated
         cy.get(':nth-child(8) > .nav-link').should('exist')
+
+        //check the url
+        cy.url().should('eq', 'https://iwanttohelp.bim.assistcloud.services/dashboard')
     })
 
     //verify that login functionality works with invalid credentials
